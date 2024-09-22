@@ -38,12 +38,12 @@ export default function page() {
 
   // Component renders a gradient overlay on bottom of the foreground image.
   const gradientOverlay: BannerLayer = {
-    opacity: [1, 1, "easeOutCubic"],
+    opacity: [1, 1.2, "easeOutCubic"],
     translateY: [0, 20],
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className=" absolute  inset-0 w-[100%]   top-[82vh] h-[100vw] bg-gradient-to-r from-[#00162B]  md:from-90% from-70% to-transparent  transform -rotate-90 " />
+      <div className=" absolute  inset-0 w-[100%]   top-[82vh] h-[100vw] bg-gradient-to-r from-[#00162B]  md:from-90% from-60% to-transparent  transform -rotate-90 " />
     ),
   };
 

@@ -51,8 +51,10 @@ export default function Home() {
       pointsTotal: item.season_points,
     };
   });
+
+  console.log(data ? "yes" : " data");
   return (
-    <div className="grid  items-center justify-items-center min-h-screen p-5 pb-20 gap-16 sm:p-10 ">
+    <div className="flex flex-col   items-center justify-items-center min-h-screen md:p-5 pb-20 gap-16 sm:p-2 ">
       <main
         className={`flex flex-col gap-8 row-start-2 items-center sm:items-start   text-foreground font`}
       >

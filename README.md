@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Software Engineer – Web Developer, Technical Test
+
+This is created with [Next.js](https://nextjs.org)
 
 ## Getting Started
 
@@ -8,14 +10,12 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result of Task 1.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result of Technical Test 01 – Data Fetching & Manipulation.
 
-For Task 2, open [http://localhost:3000/taskTwo](http://localhost:3000/taskTwo) with your browser.
+Open [http://localhost:3000/taskTwo](http://localhost:3000/taskTwo) with your browser to see Technical Test 02 – UI Development.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

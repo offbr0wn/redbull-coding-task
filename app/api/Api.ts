@@ -18,7 +18,7 @@ export default async function Api() {
       "x-api-key": apiKey,
     };
     const data = await fetch(
-      "https://pitwall.redbullracing.com/api/stats/drivers/2024",
+      "https://pitwall.redbullracing.com/api/stats/drivers/2023",
       {
         headers,
       }

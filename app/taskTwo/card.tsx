@@ -7,9 +7,10 @@ import {
   Link,
 } from "@nextui-org/react";
 import React from "react";
-import { FaPlay } from "react-icons/fa";
+import { CardResults } from "./mock-card-data";
 
-export default function Cards({ results }: any) {
+
+export default function Cards({ results }: { results: CardResults }) {
   return (
     <Link href={results.cardLinkText} target="_blank" className="cursor-pointer">
       <Card

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Api, { Driver } from "./FetchingAPi/Api";
+import Api, { Driver } from "./api/Api";
 import { useEffect, useState } from "react";
 import {
   Table,
@@ -15,15 +15,18 @@ import {
 import { Spinner } from "@nextui-org/react";
 export default function Home() {
   const [data, setData] = useState<Driver[]>([]);
-
+  // Used to call the API and populate the table when component mounts
   useEffect(() => {
+
+  // Fetching the API
+    const fetchApi = async () => {
+      const adiData = await Api();
+      setData(adiData);
+    };
     fetchApi();
   }, []);
-  const fetchApi = async () => {
-    const adiData = await Api();
-    setData(adiData);
-  };
 
+// To define table columns
   const columns = [
     {
       key: "position",
@@ -42,6 +45,8 @@ export default function Home() {
       label: "Points Total",
     },
   ];
+
+  // To define table rows and iterate through the data
   const rows = data.map((item, index) => {
     return {
       key: item.driver_uuid,
@@ -52,7 +57,6 @@ export default function Home() {
     };
   });
 
-  console.log(data ? "yes" : " data");
   return (
     <div className="flex flex-col   items-center justify-items-center min-h-screen md:p-5 pb-20 gap-16 sm:p-2 ">
       <main
@@ -81,7 +85,6 @@ export default function Home() {
               items={rows}
               loadingContent={<Spinner />}
               loadingState={!data ? "loading" : "idle"}
-              
             >
               {(item) => (
                 <TableRow
